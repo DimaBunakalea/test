@@ -1,0 +1,36 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 9, ../sass/screen.scss */
+.navbar-toggler {
+  position: absolute;
+  top: 0.5rem;
+  right: 0rem;
+  z-index: 10;
+}
+/* line 14, ../sass/screen.scss */
+.navbar-toggler .fa-bars {
+  display: none;
+}
+/* line 18, ../sass/screen.scss */
+.navbar-toggler[aria-expanded="false"] .fa-times {
+  display: none;
+}
+/* line 22, ../sass/screen.scss */
+.navbar-toggler[aria-expanded="false"] .fa-bars {
+  display: block;
+}
+/* line 27, ../sass/screen.scss */
+.navbar-collapse {
+  position: fixed;
+  width: 100%;
+  background-color: #e57f85;
+  top: 0;
+  left: 0;
+}
+
+/* line 36, ../sass/screen.scss */
+.header_container {
+  background-color: #26b0e6;
+}
