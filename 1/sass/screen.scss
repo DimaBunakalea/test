@@ -4,8 +4,29 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+$blue : #62c2e7 ;
+$primary_icon : #6fbbe3;
+$pink : #e57f85;
 
+
+$default_font: 16px;
+$default_line_height:25px; 
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: $default_font;
+    line-height: $default_line_height;  
+}
+.fa{
+    &.text-primary{
+        color: $primary_icon!important;
+    }
+}
+.menu-small{
+    display: inline-block;
+}
 .navbar{
+    
     &-toggler{
        position: absolute;
        top:0.5rem;
@@ -28,13 +49,256 @@
         position: fixed;
         width: 100%;
       
-        background-color: #e57f85;
+        background-color:$pink;
         top: 0;
         left: 0;
+        z-index: 1;
+            
     }
 }
 .header_container{
-    background-color: #26b0e6;
+    background-color: $blue;
 }
 
 
+//iphone start
+.wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .iphone {
+    position: relative;
+    background: #202020;
+    width: 45%;
+    height: 0;
+    padding-top: 95%;
+    margin: 0 auto;
+    border-radius: 3em;
+    
+  }
+  
+  .power {
+    position: absolute;
+    background: #202020;
+    width: 13%;
+    height: .5%;
+    top: -.5%;
+    right: 12%;
+    border-top-left-radius: .5em;
+    border-top-right-radius: .5em;
+  }
+  
+  .lock {
+    position: absolute;
+    background: #202020;
+    width: 1%;
+    height: 5%;
+    top: 12.5%;
+    left: -1%;
+    border-top-left-radius: .5em;
+    border-bottom-left-radius: .5em;
+  }
+  
+  .volume {
+    position: absolute;
+    background: #202020;
+    width: 1%;
+    height: 4%;
+    top: 23%;
+    left: -1%;
+    border-top-left-radius: .5em;
+    border-bottom-left-radius: .5em;
+  }
+  
+  .volume.down{ top: 31%; }
+  
+  .camera {
+    position: absolute;
+    top: 4%;
+    left: 48.5%;
+    background: #3f3f3f;
+    width: 3%;
+    height: 0;
+    padding-top: 3%;
+    border-radius: 50%;
+  }
+  
+  .speaker {
+    position: absolute;
+    top: 7%;
+    left: 42.5%;
+    background: #3f3f3f;
+    width: 15%;
+    height: 0;
+    padding-top: 3%;
+    border-radius: 1em;
+  }
+  
+  .appleicon {
+    padding-top: 25%;
+    opacity: 0;
+    animation: unhide 5s infinite alternate;
+  }
+  
+  .appleicon img{
+    width: 100%;
+   
+  }
+  
+  .text {
+    opacity: 0;
+    font-size: 1.25rem;
+    text-align: center;
+    animation: unhide 5s infinite alternate;
+  }
+  
+  .screen {
+    background: #2f2f2f;
+    width: 90%;
+    height: 75%;
+    position: absolute;
+    top: 12.5%;
+    left: 5%;
+    animation: lighten 5s infinite alternate;
+  }
+  
+  .button {
+    position: absolute;
+    bottom: 2.75%;
+    left: 42.5%;
+    background: #3f3f3f;
+    /* border: 1px solid #3f3f3f; */
+    width: 15%;
+    height: 0;
+    padding-top: 15%;
+    border-radius: 50%;
+  }
+  
+  .square {
+    position: absolute;
+    top: 27.5%;
+    left: 27.5%;
+    border: 2px solid #d7d7d7;
+    border-radius: .3em;
+    width: 45%;
+    height: 45%;
+  }
+  
+  @media screen and (min-width: 28em ) {
+    body{ font-size: 8px; }
+  }
+  
+  @media screen and (min-width: 34em ) {
+    body{ font-size: 10px; }
+  }
+  
+  @media screen and (min-width: 48em ) {
+    body{ font-size: 14px; }
+  }
+  
+  @keyframes lighten {
+    0%, 45% { background: #2f2f2f; }
+    65%, 100% { background: #f7f7f7; }
+  }
+  
+  @keyframes unhide {
+    0%, 55% { opacity: 0 }
+    75%, 100% { opacity: 1 }
+  }
+  //end iphone
+  .content_container{
+    background-color: $blue;   
+}
+.content_text{
+    width: 470px;
+    
+    padding-left: 50px;
+    padding-top: 150px;
+    padding-bottom: 50px;
+    
+    
+    
+}
+.content2_conteiner
+{
+    background-color: #f4f4f4;
+}
+.button2 {
+    color: #14af8f;
+    margin-left: 50px;
+    
+
+}
+//start ipad
+
+ .ipad {
+   position: relative;
+   width: 600px;
+   height: 800px;
+   background: #070707;
+   border: 70px solid #121212;
+   border-radius: 50px;
+   box-shadow: 1px 1px 1px red,inset 0 0 10px #000000,-3px 1px 1px white,-3px 1px 1px cyan;
+ }
+ .ipad:after {
+   position: absolute;
+   top: 685px;
+   left: 50%;
+   margin-left: -10px;
+   content: "";
+   display: block;
+   width: 20px;
+   height: 20px;
+   border-radius: 20%;
+   border: solid 1px #555;
+ }
+ .ipad:before {
+   position: absolute;
+   top: 670px;
+   left: 50%;
+   margin-left: -25px;
+   content: "";
+   display: block;
+   width: 50px;
+   height: 50px;
+   background: red;
+   border-radius: 50%;
+   border: solid 1px #222;
+   background: #0f0f0f;
+   background: -moz-linear-gradient(top, #0f0f0f 5%, black 52%, #212121 53%, #3d3d3d 100%);
+   background: -webkit-gradient(linear, left top, left bottom, color-stop(5%, #0f0f0f), color-stop(52%, black), color-stop(53%, #212121), color-stop(100%, #3d3d3d));
+   background: -webkit-linear-gradient(top, #0f0f0f 5%, black 52%, #212121 53%, #3d3d3d 100%);
+   background: -o-linear-gradient(top, #0f0f0f 5%, black 52%, #212121 53%, #3d3d3d 100%);
+   background: -ms-linear-gradient(top, #0f0f0f 5%, black 52%, #212121 53%, #3d3d3d 100%);
+   background: linear-gradient(to bottom, #0f0f0f 5%, black 52%, #212121 53%, #3d3d3d 100%);
+   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0f0f0f', endColorstr='#3d3d3d',GradientType=0 );
+ }
+ .scr-inn-shadow {
+   position: absolute;
+   top: 0px;
+   left: 50%;
+   margin-left: -230px;
+   width: 460px;
+   height: 660px;
+   pointer-events: none;
+   box-shadow: inset 0 0 10px rgba(0,0,0,0.5),-1px -1px 0px #211,-2px 0px 0px #232323,1px 1px 0px #222,1px 0px 1px #044;
+ }
+ .scr-gloss-effect {
+   position: absolute;
+   top: -70px;
+   left: 50%;
+   margin-left: -300px;
+   width: 600px;
+   height: 800px;
+   pointer-events: none;
+   border-radius: 50px;
+   background: -moz-linear-gradient(-70deg,  rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 53%, rgba(255,255,255,0.05) 54%, rgba(255,255,255,0) 90%, rgba(255,255,255,0) 100%);
+ background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(255,255,255,0.05)), color-stop(53%,rgba(255,255,255,0)), color-stop(54%,rgba(255,255,255,0.05)), color-stop(90%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,0)));
+ background: -webkit-linear-gradient(-70deg,  rgba(255,255,255,0.05) 0%,rgba(255,255,255,0) 53%,rgba(255,255,255,0.05) 54%,rgba(255,255,255,0) 90%,rgba(255,255,255,0) 100%);
+ background: -o-linear-gradient(-70deg,  rgba(255,255,255,0.05) 0%,rgba(255,255,255,0) 53%,rgba(255,255,255,0.05) 54%,rgba(255,255,255,0) 90%,rgba(255,255,255,0) 100%);
+ background: -ms-linear-gradient(-70deg,  rgba(255,255,255,0.05) 0%,rgba(255,255,255,0) 53%,rgba(255,255,255,0.05) 54%,rgba(255,255,255,0) 90%,rgba(255,255,255,0) 100%);
+ background: linear-gradient(110deg,  rgba(255,255,255,0.05) 0%,rgba(255,255,255,0) 53%,rgba(255,255,255,0.05) 54%,rgba(255,255,255,0) 90%,rgba(255,255,255,0) 100%);
+ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2bffffff', endColorstr='#00ffffff',GradientType=1 );
+ }
+//end ipad
